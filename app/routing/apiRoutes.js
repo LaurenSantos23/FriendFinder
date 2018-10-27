@@ -23,13 +23,13 @@ app.post("/api/friends", function(req, res){
 
     //loop to run through the current friends list
     for (const i=0; i<friends.length; i++){
-        const scoreDiff = 0;
+        const totalDifference = 0;
         //run through the scores in the friends array to compare friends
         for (const f=0; f<newFriendScore.length, f++) {
-            scoreDiff +- (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
+            totalDifference +- (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
         }
         //push into the scoresArray
-        scoresArray.push(scoreDiff);
+        scoresArray.push(totalDifference);
     }
     // after all friends are compared find the best match based on similar scores
     for (const i=0; i<scoresArray.length; i++){
