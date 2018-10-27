@@ -1,5 +1,5 @@
 {
-  "name": "FriendFinder",
+  "name": "friendfinder",
   "version": "1.0.0",
   "description": "A compatibility-based \"FriendFinder\" application -- similar to  a dating app. This full-stack site will take in results from your users'  surveys, then compare their answers with those from other users. The app will then display the name and  picture of the user with   the best overall match.",
   "main": "index.js",
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/LaurenSantos23/FriendFinder.git"
   },
   "keywords": [],
-  "author": "Lauren Santosuosso",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/LaurenSantos23/FriendFinder/issues"
