@@ -2,7 +2,7 @@
 
 const express = require('express');
 const path = require('path');
-// const apiRoutes = require('./path/to/apiRoutes')
+const apiRoutes = require('./path/to/apiRoutes')
 
 //Setting up express App
 
@@ -14,13 +14,17 @@ const PORT = process.env.PORT || 3000;
 // Sets up Express app to handle data parsing
 app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
-// app.use(apiRoutes);
+app.use(apiRoutes);
 
 //Routes 
 
 //Basic route that sends the user first to the Welcome Page 
 app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "home.html"));
+});
+
+app.get("/survey", function (req, res){
+    res.sendFile(path.join(__dirname, "survey.html"));
 });
 
 // Code that starts the server to begin listening
