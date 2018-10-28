@@ -16,16 +16,9 @@ app.use(express.urlencoded({ extended: true}));
 app.use(express.json());
 app.use(apiRoutes);
 
-//Routes 
-
-//Basic route that sends the user first to the Welcome Page 
-app.get("/", function (req, res) {
-    res.sendFile(path.join(__dirname, "home.html"));
-});
-
-app.get("/survey", function (req, res){
-    res.sendFile(path.join(__dirname, "survey.html"));
-});
+//router
+require("./app/routing/apiRoutes.js")(app);
+require(".app/routing/htmlRoutes.js")(app);
 
 // Code that starts the server to begin listening
 app.listen(PORT, function() {
