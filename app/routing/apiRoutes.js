@@ -25,8 +25,8 @@ app.post("/api/friends", function(req, res){
     for (let i=0; i<friends.length; i++){
         let totalDifference = 0;
         //run through the scores in the friends array to compare friends
-        for (let f=0; f<newFriendScore.length; f++) {
-            totalDifference +- (Math.abs(parseInt(friends[i].scores[f])- parseInt(newFriendScore[f])));
+        for (let j=0; j<newFriendScore.length; j++) {
+            totalDifference +- (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
         }
         //push into the scoresArray
         scoresArray.push(totalDifference);
