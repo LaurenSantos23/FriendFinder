@@ -20,6 +20,7 @@ app.post("/api/friends", function(req, res){
     let scoresArray = [];
     let friendCount = 0;
     let bestMatch = 0;
+    console.log("nfs:" + newFriendScore)
 
     //loop to run through the current friends list
     for (let i=0; i<friends.length; i++){
@@ -27,8 +28,9 @@ app.post("/api/friends", function(req, res){
         console.log(friends[i])
         //run through the scores in the friends array to compare friends
         for (let j=0; j<newFriendScore.length; j++) {
-            console.log("nfs:" + newFriendScore[i])
-            totalDifference +- (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
+            console.log((Math.abs(parseInt(friends[i].scores[j]))))
+             console.log(parseInt(newFriendScore[j]));
+            totalDifference = (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
             console.log("score dif" + totalDifference);
         }
         //push into the scoresArray
@@ -36,7 +38,7 @@ app.post("/api/friends", function(req, res){
     }
     // after all friends are compared find the best match based on similar scores
     for (let i=0; i<friends.length; i++){
-        console.log("scoresArray[i] "+ scoresArray[i]+" scoresArray[bestMatch] " + scoresArray[bestMatch] )
+        console.log("scoresArray[i] "+ friends[i]+" scoresArray[bestMatch] " + scoresArray[bestMatch] )
         if(scoresArray[i]<= scoresArray[bestMatch]){
            bestMatch = i;
         }
