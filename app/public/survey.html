@@ -139,22 +139,69 @@
               <option value="4">4</option>
               <option value="5">5 (Strongly Agree)</option>
             </select>
+
+       
         
             <br>
             <br>
         
             <!-- Submit Button -->
-            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit"><i class="fa fa-check-circle" aria-hidden="true"></i>
+            <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit" onclick="submitSurvey()"><i class="fa fa-check-circle" aria-hidden="true"></i>
              Submit</button>
+
+             <div class="modal" id="friendMatchModal" style="width:500px;">
+              <div class="modal-content">
+                  <h1 id="matchName"></h1>
+                  <p id="moreInfo"></p>
+              </div>
         
             <hr>
             <footer class="footer">
               <div class="container">
                 <p><a href="/api/friends">API Friends List</a> | <a href="https://laurensantos23.github.io/FriendFinder/">GitHub Repo</a></p>
               </div>
-            </footer>
-            
+            </footer>     
     </div>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"crossorigin="anonymous"></script>
+    <script>
+      
+      
+      //Function to submit user survey values
+      function submitSurvey() {
+          event.preventDefault();
+          if ($("#name").val().trim() === "" || $("#photo").val().trim() === "") {
+              alert("Please complete all questions.");
+              return;
+          } else {
+              var surveyInput = {
+                  name: $("#name").val().trim(),
+                  photo: $("#photo").val().trim(),
+                  scores: [
+                      $("q1").val().trim(),
+                      $("#q2").val().trim(),
+                      $("#q3").val().trim(),
+                      $("#q4").val().trim(),
+                      $("#5").val().trim(),
+                      $("#6").val().trim(),
+                      $("#7").val().trim(),
+                      $("#8").val().trim(),
+                      $("#q9").val().trim(),
+                      $("#q10").val().trim(),
+                  ]
+              }
+
+              //Adding in friend match name and image to modal 
+              $.post("/submitSurvey", surveyInput)
+                  .done(function (data) {
+                      $(".modal-content").html("<h1>Your match is " + data.name + "!</h1>");
+                      $('<img src="' + data.image + '">').appendTo(".modal-content");
+                      $("#friendMatchModal").modal();
+                  })
+          }
+      }
+
+  </script>
 </body>
 </html>

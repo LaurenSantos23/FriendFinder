@@ -84,3 +84,4 @@ const users = [
         ]
     },
 ]
+module.exports(friends);
