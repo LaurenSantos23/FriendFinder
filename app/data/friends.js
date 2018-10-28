@@ -15,6 +15,38 @@ const friends = [
             5
         ]
     },
+    {
+        name: "Steve LaPearl",
+        photo: "https://thumbs.dreamstime.com/z/latino-man-tastes-awful-food-8998438.jpg",
+        scores:[
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+        ]
+    },
+    {
+        name: "Jerky McJerkface",
+        photo: "http://archive.4plebs.org/dl/pol/image/1449/09/1449092601539.jpg",
+        scores:[
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1
+        ]
+    },
 
     {
         name: "Mark P",
