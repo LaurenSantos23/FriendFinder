@@ -1,4 +1,4 @@
-const users = [
+const friends = [
     {
         name: "Lauren S",
         photo: "https://memeguy.com/photos/images/i-think-i-found-my-favorite-stock-photo-129777.jpg",
@@ -84,4 +84,4 @@ const users = [
         ]
     },
 ]
-module.exports(friends);
+module.exports = friends;

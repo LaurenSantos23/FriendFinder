@@ -150,6 +150,7 @@
              <div class="modal" id="friendMatchModal" style="width:500px;">
               <div class="modal-content">
                   <h1 id="matchName"></h1>
+                  <!-- <img id="matchImg" src="https://placekitten.com/200/300" > -->
                   <p id="moreInfo"></p>
               </div>
         
@@ -191,10 +192,11 @@
               }
 
               //Adding in friend match name and image to modal 
-              $.post("/submitSurvey", surveyInput)
+              $.post("/api/friends", surveyInput)
                   .done(function (data) {
                       $(".modal-content").html("<h1>Your match is " + data.name + "!</h1>");
-                      $('<img src="' + data.image + '">').appendTo(".modal-content");
+                      // $("#matchImg").attr("src", data.photo);
+                      $('<img src="' + data.photo + '">').appendTo(".modal-content");
                       $("#friendMatchModal").modal();
                   })
           }
