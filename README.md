@@ -9,8 +9,8 @@ Express is being utilized to handle routing. The site is deployed to Heroku, so 
 
 The following NPM Packages are installed to run this app:
 
-* [inquirer](https://www.npmjs.com/package/inquirer)
-* [mysql](https://www.npmjs.com/package/mysql)
+* [express](https://www.npmjs.com/package/express)
+* [path](https://www.npmjs.com/package/path)
 
 
  ### Screenshots of Site
