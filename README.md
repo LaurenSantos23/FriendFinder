@@ -36,7 +36,7 @@ The home page contains a brief explanation of what Friend Finder does. There is 
 ![Example of Modal displaying users' "Best Match"](img/dennis-hopper-modal.png)
   
 ### Link to Video Walkthrough will go here
-  
+https://drive.google.com/file/d/1q3W9KE5AzvqXOjJ1FF6QLXW5dn8sNux1/view
   
 ### Link to Deployed Friend Finder site on Heroku
 https://evening-savannah-22406.herokuapp.com/ 
