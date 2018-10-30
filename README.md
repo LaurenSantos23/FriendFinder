@@ -19,19 +19,19 @@ The home page contains a brief explanation of what Friend Finder does. There is 
 
  ### Screenshots of Site
 
-* Example of Friend Finder Home Page 
+## Example of Friend Finder Home Page 
 
 ![Example of Friend Finder Home Page](/app/img/friend-finder-welcome.png)
 
-* Example of Survey Page 
+## Example of Survey Page 
 
 ![Example of Survey Page](/app/img/survey-1.png)
 
-* Example of Survey Page 
+## Example of Survey Page 
 
 ![Example of Survey Page](/app/img/survey-2.png)
 
-* Example of Modal displaying users' 'Best Match' 
+## Example of Modal displaying users' 'Best Match' 
 
 ![Example of Modal displaying users' "Best Match"](/app/img/dennis-hopper-modal.png)
   
