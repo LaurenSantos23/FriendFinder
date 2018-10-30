@@ -33,7 +33,7 @@ var friends = [
     },
     {
         name: "Jerky McJerkface",
-        photo: "http://archive.4plebs.org/dl/pol/image/1449/09/1449092601539.jpg",
+        photo: "https://archive.4plebs.org/dl/pol/image/1449/09/1449092601539.jpg",
         scores:[
             1,
             1,
@@ -101,7 +101,7 @@ var friends = [
 
     {
         name: "Dennis Hopper",
-        photo: "http://l7.alamy.com/zooms/2416caa4779a463f87a1154ede8288d7/smiling-man-wearing-bunny-ears-and-holding-a-rabbit-cmnnnr.jpg",
+        photo: "https://l7.alamy.com/zooms/2416caa4779a463f87a1154ede8288d7/smiling-man-wearing-bunny-ears-and-holding-a-rabbit-cmnnnr.jpg",
         scores: [
             3,
             4,
