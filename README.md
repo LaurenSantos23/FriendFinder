@@ -17,23 +17,31 @@ The following NPM Packages are installed to run this app:
 The home page contains a brief explanation of what Friend Finder does. There is a link to the friend API and the github repository. Underneath the explanation is a button that leads the user to the survey page.  The user is then required to sumbit their name, a photo and answer 10 questions.  Upon clicking the submit button, the user is then shown a modal that gives their best match with a name and photo. 
 
 
- ### Screenshots of Site
+ ## Screenshots of Site
 
 ## Example of Friend Finder Home Page 
 
 ![Example of Friend Finder Home Page](/app/img/friend-finder-welcome.png)
 
+
+
 ## Example of Survey Page 
 
 ![Example of Survey Page](/app/img/survey-1.png)
+
+
 
 ## Example of Survey Page 
 
 ![Example of Survey Page](/app/img/survey-2.png)
 
+
+
 ## Example of Modal displaying users' 'Best Match' 
 
 ![Example of Modal displaying users' "Best Match"](/app/img/dennis-hopper-modal.png)
+
+
   
 ### Link to Video Walkthrough will go here
 https://drive.google.com/file/d/1q3W9KE5AzvqXOjJ1FF6QLXW5dn8sNux1/view
