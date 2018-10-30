@@ -1,6 +1,6 @@
 //Dependencies
-const express = require('express');
-const path = require('path');
+var express = require('express');
+var path = require('path');
 
 //do i need to put a const for apiRoute in this page?
 

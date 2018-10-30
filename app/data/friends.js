@@ -1,4 +1,4 @@
-let friends = [
+var friends = [
     {
         name: "Lauren S",
         photo: "https://memeguy.com/photos/images/i-think-i-found-my-favorite-stock-photo-129777.jpg",

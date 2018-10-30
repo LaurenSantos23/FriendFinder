@@ -1,13 +1,13 @@
 //Dependencies
 
-const express = require('express');
-const path = require('path');
+var express = require('express');
+var path = require('path');
 //Setting up express App
 
-const app = express();
+var app = express();
 
 //Setting port to 3000
-const PORT = process.env.PORT || 3000;
+var PORT = process.env.PORT || 3000;
 
 // Sets up Express app to handle data parsing
 app.use(express.urlencoded({ extended: true}));
