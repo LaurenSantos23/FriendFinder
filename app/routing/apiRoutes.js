@@ -4,7 +4,7 @@ const path = require('path');
 
 //do i need to put a const for apiRoute in this page?
 
-let friends = require("../data/friends.js");
+var friends = require("../data/friends.js");
 
 // Routes
 
@@ -16,35 +16,29 @@ module.exports = function (app) {
     
 app.post("/api/friends", function(req, res){
     //grabs the new users scores to compare with friends in the friends array
-    let newFriendScore = req.body.scores;
-    let scoresArray = [];
-    let friendCount = 0;
-    let bestMatch = 0;
-    console.log("nfs:" + newFriendScore)
+    var newFriendScore = req.body.scores;
+    var scoresArray = [];
+    var bestMatch = 0;
 
     //loop to run through the current friends list
-    for (let i=0; i<friends.length; i++){
-        let totalDifference = 0;
-        console.log(friends[i])
+    for (var i=0; i<friends.length; i++){
+        var totalDifference = 0;
         //run through the scores in the friends array to compare friends
-        for (let j=0; j<newFriendScore.length; j++) {
-            console.log((Math.abs(parseInt(friends[i].scores[j]))))
-             console.log(parseInt(newFriendScore[j]));
-            totalDifference = (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
+        for (var j=0; j<newFriendScore.length; j++) {
+            totalDifference += (Math.abs(parseInt(friends[i].scores[j])- parseInt(newFriendScore[j])));
             console.log("score dif" + totalDifference);
         }
         //push into the scoresArray
         scoresArray.push(totalDifference);
     }
     // after all friends are compared find the best match based on similar scores
-    for (let i=0; i<friends.length; i++){
-        console.log("scoresArray[i] "+ friends[i]+" scoresArray[bestMatch] " + scoresArray[bestMatch] )
-        if(scoresArray[i]<= scoresArray[bestMatch]){
-           bestMatch = i;
+    for (var k=0; k<scoresArray.length; k++){
+        if(scoresArray[k]<= scoresArray[bestMatch]){
+           bestMatch = k;
         }
     }
     //retun bestMatch data
-    let veryBestFriend = friends[bestMatch];
+    var veryBestFriend = friends[bestMatch];
     
     //push new submission into the friends array
     friends.push(req.body);
