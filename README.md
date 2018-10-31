@@ -43,7 +43,7 @@ The home page contains a brief explanation of what Friend Finder does. There is 
 
 
   
-### Link to Video Walkthrough will go here
+### Link to Video Walkthrough of Friend Finder Site
 https://drive.google.com/file/d/1q3W9KE5AzvqXOjJ1FF6QLXW5dn8sNux1/view
   
 ### Link to Deployed Friend Finder site on Heroku
